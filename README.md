@@ -12,6 +12,6 @@
 
 5. 编译过程中会将下载的软件包和解压后的源码放到source目录中，并在source目录中生成build文件，包含所有产出。编译完成后会将产出复制到编译脚本所在根目录。 
 
-6.解压过程中会提示用户修改x264 configure文件，找到echo "SONAME=libx264.so.$API" >> config.mak，修改为echo "SONAME=libx264.x.so" >> config.mak。否则生成后缀带版本号的so库不能在android平台中使用。
+6. 解压过程中会提示用户修改x264 configure文件，找到echo "SONAME=libx264.so.$API" >> config.mak，修改为echo "SONAME=libx264.x.so" >> config.mak。否则生成后缀带版本号的so库不能在android平台中使用。
 
 
