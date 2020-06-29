@@ -1,0 +1,14 @@
+prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r20b/source/build/ffmpeg/armv7-a
+exec_prefix=${prefix}
+libdir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r20b/source/build/ffmpeg/armv7-a/lib
+includedir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r20b/source/build/ffmpeg/armv7-a/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.57.100
+Requires: 
+Requires.private: libavutil >= 56.31.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

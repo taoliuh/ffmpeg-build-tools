@@ -1,0 +1,14 @@
+prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a
+exec_prefix=${prefix}
+libdir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/lib
+includedir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: 
+Requires.private: libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

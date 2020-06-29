@@ -1,0 +1,11 @@
+prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r20b/source/build/fdk-aac/armv7-a
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Fraunhofer FDK AAC Codec Library
+Description: AAC codec library
+Version: 2.0.0
+Libs: -L${libdir} -lfdk-aac 
+Libs.private: -lm 
+Cflags: -I${includedir}
