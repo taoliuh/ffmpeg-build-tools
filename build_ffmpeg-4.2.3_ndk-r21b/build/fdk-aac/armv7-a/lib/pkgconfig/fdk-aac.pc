@@ -1,4 +1,4 @@
-prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/fdk-aac/armv7-a
+prefix=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/fdk-aac/armv7-a
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

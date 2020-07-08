@@ -1,7 +1,7 @@
-prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a
+prefix=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a
 exec_prefix=${prefix}
-libdir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/lib
-includedir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/include
+libdir=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/lib
+includedir=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.1.5_ndk-r20b/source/build/ffmpeg/armv8-a/include
 
 Name: libswresample
 Description: FFmpeg audio resampling library

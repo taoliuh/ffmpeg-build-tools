@@ -22,7 +22,11 @@ function build_android_arm
 {
 	echo "Compiling FFmpeg for $CPU"
 	./configure \
-	--disable-stripping \
+	--enable-neon \
+    --enable-hwaccels \
+    --enable-jni \
+    --enable-mediacodec \
+    --enable-decoder=h264_mediacodec \
 	--disable-ffmpeg \
 	--disable-ffplay \
 	--disable-ffprobe \
@@ -30,51 +34,50 @@ function build_android_arm
 	--disable-devices \
 	--disable-indevs \
 	--disable-outdevs \
-	--disable-asm \
 	--disable-doc \
-	--enable-gpl \
-	--enable-nonfree \
-	--enable-version3 \
-	--disable-static \
-	--enable-shared \
-	--enable-small \
-	--enable-dct \
-	--enable-dwt \
-	--enable-lsp \
-	--enable-mdct \
-	--enable-rdft \
-	--enable-fft \
+	--disable-symver \
 	--disable-filters \
 	--disable-postproc \
-	--disable-bsfs \
-	--enable-bsf=h264_mp4toannexb \
-	--enable-bsf=aac_adtstoasc \
+	--disable-static \
+	--enable-shared \
+	--enable-gpl \
+	--enable-nonfree \
 	--disable-encoders \
 	--enable-encoder=pcm_s16le \
 	--enable-encoder=aac \
+	--enable-encoder=mpeg4 \
 	--disable-decoders \
 	--enable-decoder=aac \
-	--enable-decoder=mp3 \
-	--enable-decoder=pcm_s16le \
+    --enable-decoder=mp3 \
+    --enable-decoder=pcm_s16le \
+    --enable-decoder=h264 \
+    --enable-decoder=mpeg4 \
 	--disable-parsers \
 	--enable-parser=aac \
-	--enable-parser=mpegaudio \
+    --enable-parser=mpegaudio \
+    --enable-parser=h264 \
 	--disable-muxers \
 	--enable-muxer=flv \
-	--enable-muxer=wav \
-	--enable-muxer=adts \
-	--enable-muxer=mp3 \
+    --enable-muxer=wav \
+    --enable-muxer=adts \
+    --enable-muxer=mp3 \
+    --enable-muxer=h264 \
+    --enable-muxer=mp4 \
 	--disable-demuxers \
-	--enable-demuxer=flv \
-	--enable-demuxer=wav \
-	--enable-demuxer=aac \
-	--enable-demuxer=mp3 \
+    --enable-demuxer=flv \
+    --enable-demuxer=wav \
+    --enable-demuxer=aac \
+    --enable-demuxer=mp3 \
+    --enable-demuxer=h264 \
+    --enable-demuxer=mpegvideo \
+    --enable-demuxer=mov \
+    --enable-demuxer=m4v \
 	--disable-protocols \
 	--enable-protocol=rtmp \
 	--enable-protocol=file \
-	--disable-runtime-cpudetect \
 	--enable-libx264 \
 	--enable-libfdk-aac \
+	--enable-libmp3lame \
 	--prefix="$PREFIX" \
 	--cross-prefix="$CROSS_PREFIX" \
 	--target-os=android \

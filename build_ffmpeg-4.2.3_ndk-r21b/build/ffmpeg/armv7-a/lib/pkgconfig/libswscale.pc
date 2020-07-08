@@ -1,7 +1,7 @@
-prefix=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a
+prefix=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a
 exec_prefix=${prefix}
-libdir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a/lib
-includedir=/Users/liutao/Desktop/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a/include
+libdir=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a/lib
+includedir=/Work/CWorkspace/ffmpeg-build-tools/build_ffmpeg-4.2.3_ndk-r21b/source/build/ffmpeg/armv7-a/include
 
 Name: libswscale
 Description: FFmpeg image rescaling library

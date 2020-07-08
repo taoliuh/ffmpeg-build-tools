@@ -14,4 +14,21 @@
 
 6. 解压过程中会提示用户修改x264 configure文件，找到echo "SONAME=libx264.so.$API" >> config.mak，修改为echo "SONAME=libx264.x.so" >> config.mak。否则生成后缀带版本号的so库不能在android平台中使用。
 
+7. android-ndk-r20b编译3.4.7版本ffmpeg时，需要disable-neon, 否则armv7-a无法编译成功，armv8-a可以开启-mfpu=neon.
+
+# 遇到的问题:
+编译完成后测试调用ffmpeg, 发现调用avformat_open_input报错：
+Invalid data found when processing data.
+最后通过ffprobe打开视频文件，发现没有视频文件需要的解封装器，添加
+--enable-demuxer=mpegvideo \
+--enable-demuxer=mov \
+--enable-demuxer=m4v \
+编译完成后能正确打开视频文件进行播放。
+
+尤其是在裁剪ffmpeg的过程中，尤其要注意这种编译配置的变化带来的影响。小心求证，编译完成后立即验证，避免后期出错后难以定位问题。
+
+# 参考资料：
+[偶遇FFmpeg(番外)——FFmpeg花样编译入魔1之裁剪大小](https://juejin.im/entry/5bc7f18cf265da0abb14668b)
+[最新版FFmpeg移植Android：编译so库(基于NDK r20和FFmpeg-4.1.0)](https://blog.csdn.net/zuguorui/article/details/104150008)
+
 
